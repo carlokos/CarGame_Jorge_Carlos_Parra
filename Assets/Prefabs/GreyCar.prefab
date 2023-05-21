@@ -133,7 +133,7 @@ MonoBehaviour:
   FLMesh: {fileID: 4565721423940353983}
   BRMesh: {fileID: 6989969380991702405}
   BLMesh: {fileID: 1362678627962812697}
-  brakeForce: 3000
+  brakeForce: 30000
   motorForce: 500
   maxSteeringAngle: 30
 --- !u!146 &3413120808641370844 stripped

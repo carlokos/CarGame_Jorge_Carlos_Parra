@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
@@ -16,11 +17,17 @@ public class CarController : MonoBehaviour
     [SerializeField] private MeshRenderer BLMesh;
     [Header("Settings")]
     private float engineInput, steeringInput, brakeInput;
+    private float speed;
+    private float speedClamp;
+    [SerializeField] private float maxSpeed;
     private Rigidbody rb;
     [SerializeField] private float brakeForce;
     private float slipAngle;
     [SerializeField] private float motorForce;
     [SerializeField] private float maxSteeringAngle;
+    private int isEngineRunning;
+
+    public int IsEngineRunning { get => isEngineRunning; set => isEngineRunning = value; }
 
     private void Start()
     {
@@ -29,6 +36,8 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = BRWheel.rpm * BRWheel.radius * 2f * Mathf.PI / 10f;
+        speedClamp = Mathf.Lerp(speedClamp, speed, Time.deltaTime);
         rotateWheels();
     }
 
@@ -48,6 +57,10 @@ public class CarController : MonoBehaviour
         slipAngle = Vector3.Angle(transform.forward, rb.velocity - transform.forward);
 
         float movingDirection = Vector3.Dot(transform.forward, rb.velocity);
+        if(Mathf.Abs(engineInput) > 0 && isEngineRunning == 0)
+        {
+            StartCoroutine(GetComponent<EngineAudio>().StartEngine());
+        }
         if (movingDirection < -0.5f && engineInput > 0)
         {
             brakeInput = Mathf.Abs(engineInput);
@@ -73,8 +86,19 @@ public class CarController : MonoBehaviour
 
     private void handleMotor()
     {
-        BRWheel.motorTorque = motorForce * engineInput;
-        BLWheel.motorTorque = motorForce * engineInput;
+        if (isEngineRunning > 1)
+        {
+            if (Mathf.Abs(speed) < maxSpeed)
+            {
+                BRWheel.motorTorque = motorForce * engineInput;
+                BLWheel.motorTorque = motorForce * engineInput;
+            }
+            else
+            {
+                BRWheel.motorTorque = 0;
+                BLWheel.motorTorque = 0;
+            }
+        }
     }
 
     private void handleSteering()
@@ -98,5 +122,11 @@ public class CarController : MonoBehaviour
         col.GetWorldPose(out position, out quat);
         wheelMesh.transform.position = position;
         wheelMesh.transform.rotation = quat;
+    }
+
+    public float GetSpeedRatio()
+    {
+        var gas = Mathf.Clamp(Mathf.Abs(engineInput), 0.5f, 1f);
+        return speedClamp * gas / maxSpeed;
     }
 }
