@@ -1596,28 +1596,144 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: needle
+      value: 
+      objectReference: {fileID: 2039085212}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: txtRPM
+      value: 
+      objectReference: {fileID: 1883017675}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: idleRPM
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: redLine
+      value: 6500
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: txtGear
+      value: 
+      objectReference: {fileID: 1308099886}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: maxSpeed
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: motorForce
-      value: 500
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: decreaseGearRPM
+      value: 3300
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: increaseGearRPM
+      value: 5500
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: differentialRatio
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: maxNeedleRotation
+      value: -220
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: minNeedleRotation
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: gearRatios.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: gearRatios.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: gearRatios.Array.data[1]
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: gearRatios.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: gearRatios.Array.data[3]
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: gearRatios.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: gearRatios.Array.data[5]
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[0].time
+      value: 0.008333325
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[2].time
+      value: 1.0083333
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[0].inSlope
+      value: 0.0749307
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[1].inSlope
+      value: -0.10726738
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[0].outSlope
+      value: 0.0749307
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[1].outSlope
+      value: -0.10726738
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[0].outWeight
+      value: 0.22268909
+      objectReference: {fileID: 0}
+    - target: {fileID: 36050434, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
+      propertyPath: horsePower.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 745093729166134779, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.damper
-      value: 4500
+      value: 9000
       objectReference: {fileID: 0}
     - target: {fileID: 745093729166134779, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.spring
-      value: 35000
+      value: 70000
       objectReference: {fileID: 0}
     - target: {fileID: 2398498850585866158, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.damper
-      value: 4500
+      value: 9000
       objectReference: {fileID: 0}
     - target: {fileID: 2398498850585866158, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.spring
-      value: 35000
+      value: 70000
       objectReference: {fileID: 0}
     - target: {fileID: 2469121479226091264, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_RootOrder
@@ -1669,19 +1785,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3413120808641370844, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.damper
-      value: 4500
+      value: 9000
       objectReference: {fileID: 0}
     - target: {fileID: 3413120808641370844, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.spring
-      value: 35000
+      value: 70000
       objectReference: {fileID: 0}
     - target: {fileID: 5077037879174331721, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.damper
-      value: 4500
+      value: 9000
       objectReference: {fileID: 0}
     - target: {fileID: 5077037879174331721, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
       propertyPath: m_SuspensionSpring.spring
-      value: 35000
+      value: 70000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfd0b44f06ac4c440b5601b0717a3e8c, type: 3}
@@ -1711,7 +1827,7 @@ MonoBehaviour:
   runningMaxVolume: 1
   runningMaxPitch: 2
   reverseSound: {fileID: 1463255783}
-  reverseMaxVolume: 0.35
+  reverseMaxVolume: 0.3
   reverseMaxPitch: 1
   idleSound: {fileID: 628321469}
   idleMaxVolume: 1
