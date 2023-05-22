@@ -130,11 +130,11 @@ public class CarController : MonoBehaviour
 
     private void handleBrake()
     {
-        FRWheel.brakeTorque = brakeInput * brakeForce * 0.7f;
-        FLWheel.brakeTorque = brakeInput * brakeForce * 0.7f;
+        FRWheel.brakeTorque = brakeInput * brakeForce;
+        FLWheel.brakeTorque = brakeInput * brakeForce;
 
-        BRWheel.brakeTorque = brakeInput * brakeForce * 0.3f;
-        BLWheel.brakeTorque = brakeInput * brakeForce * 0.3f;
+        BRWheel.brakeTorque = brakeInput * brakeForce;
+        BLWheel.brakeTorque = brakeInput * brakeForce;
     }
 
     private void handleMotor()
