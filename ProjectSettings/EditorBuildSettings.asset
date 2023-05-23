@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 0be4e3175da1c054ebde6d2b74cbd23e
+  - enabled: 1
+    path: Assets/CartoonTracksPack1/Track1/Demo Scenes/complete_track_demo.unity
+    guid: 83760dd98fe89364daec0c8817772284
   m_configObjects: {}
